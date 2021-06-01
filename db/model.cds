@@ -10,6 +10,7 @@ entity ProductCategory : managed {
     key ID             : UUID;
         title          : localized String(50);
         description    : localized String(200);
+        favorite       : Boolean;
         parentCategory : Association to ProductCategory;
         products       : Association to many Product
                              on products.category = $self;
